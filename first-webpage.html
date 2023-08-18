@@ -10,16 +10,90 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <script src="./external.js"></script>
         <style>
+            selector {
+                property: value;
+            }
 
+            /* id based selector (#) */
+            #name_txt {
+                padding: 10px;
+            }
+
+            /* class based selector (.)*/
+            .textbox {
+                border: 2px dashed green;
+            }
+
+            /* tag based selector (tag name)*/
+            input {
+                background-color: aqua;
+            }
+
+            /* grouping selectors (,) */
+            td,th,#para {
+                color: blue;
+            }
+
+            /* universal selector */
+            * {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* attribute based selector */
+            img[src='./assets/images/logo.png'] {
+                height: 150px;
+            }
+
+            div {
+                border: 2px solid red;
+                margin: 10px;
+                padding: 20px;
+                background-color: white;
+            }
+
+            /* descendent selector( ) */
+            #steve div {
+            }
+
+            /* child selector (>) */
+            #rohan>div {
+            }
+
+            /* adjacent(next-to) selector */
+            #bob+div {
+                
+            }
+            /* (smaller) sibling selector */
+            #bob~div {
+                background-color: blue;
+                border: 3px dashed red;
+            }
         </style>
         <script>
 
         </script>
     </head>
     <body>
+
+        <div id="john">
+            <div id="steve">
+                <div id="lee"></div>
+                <div id="bob"></div>
+                <div id="ella"></div>
+            </div>
+            <div id="rohan">
+                <div id="sam"></div>
+                <div id="tom">
+                    <div id="paul"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- basic tags -->
-        <p>This is a HTML <p></p>Paragraph tag 1</p>
-        <p>This is a HTML Paragraph tag 2</p>
+        <p >This is a HTML Paragraph tag 1</p>
+        <p id="para">This is a HTML Paragraph tag 2</p>
         <div>This is a<br>Div tag 1</div>
         <div>This is a Div tag 2</div>
         <span>This is a Span tag 1</span>
@@ -28,7 +102,19 @@
         sdsd as     dasdsdas      dasdasdsadasdsad
         <pre>asdsd as     dasdsdas      dasdasdsadasdsad</pre>
         <hr>
+
         <!--  multimedia tags -->
+        <audio controls>
+            <source src="" />
+        </audio>
+        <video controls  height="300px">
+            <source src="https://sidcupfamilygolf.com/wp-content/uploads/2023/02/hero.mp4" srcset="" />
+        </video>
+        <img src="./../SkillVertex-WD-April23/frontend development/assets/images/client-jumbotron-img.jpg" alt="img" width="100px" style=" width: 100px; "/>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WmbvXZrR94c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="https://www.tutorialrepublic.com/html-reference/html5-tags.php" height="700px"></iframe>
+        <embed  width="560" height="315" src="https://www.youtube.com/embed/WmbvXZrR94c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen/>
+        <hr><br><br>
 
         <!-- semantic tags -->
         <header></header>
@@ -39,15 +125,219 @@
         <article></article>
         <aside></aside>
 
-
         <!-- formatting tags -->
+        <b>HEllo</b>  <strong>World</strong>
+        <i>Hello</i>  <em>world</em>
+        <u>hello</u>  <ins>world</ins>
+
+        <Del></Del><ins></ins>
+
+        x<sub>0</sub>=2<sup>2</sup>
+
+        <center><div><mark>HTML</mark> stands for hypertext <del>marking</del><ins>markup</ins> language</div></center></marquee>
+        HTMl stands for hypertext markup language 
 
         <!-- list tags -->
+        <ol type="i">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+            <li>List Item 5</li>
+            <li>List Item 6</li>
+        </ol>
+
+        <ul type="square">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+        
+        <dl>
+            <dt>Topic</dt>
+            <dd>Topic description</dd>
+        </dl>
 
         <!-- heading tags -->
+        <h1>Heading Text 1</h1>
+        <h2>Heading Text 2</h2>
+        <h3>Heading Text 3</h3>
+        <h4>Heading Text 4</h4>
+        <h5>Heading Text 5</h5>
+        <h6>Heading Text 6</h6>
 
         <!-- table tags -->
+        <table border="2px">
+            <caption>Student Information</caption>
+            <colgroup>
+                <col />
+                <col span="2" style="background-color: red;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Address</th>
+                    <th>Phone No.</th>
+                    <th>Email Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Akash Soni</td>
+                    <td>Bangalore</td>
+                    <td>534534245</td>
+                    <td>akash@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Akash Soni</td>
+                    <td>Bangalore</td>
+                    <td>534534245</td>
+                    <td>akash@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Akash Soni</td>
+                    <td>Bangalore</td>
+                    <td>534534245</td>
+                    <td>akash@gmail.com</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+
+        <style>
+            table, td,th {
+                border: 2px solid green;
+            }
+        </style>
+        <table>
+            <caption>Employee Information</caption>
+            <colgroup>
+                <col span="2" style="background-color: blue" />
+                <col span="2" />
+                <col style="background-color: aqua;" />
+            </colgroup>
+            <tr>
+                <th colspan="2">Name</th>
+                <th rowspan="2">Email Address</th>
+                <th rowspan="2">Mob</th>
+                <th colspan="3">Address</th>
+            </tr>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Line 1</th>
+                <th>City</th>
+                <th>State</th>
+            </tr>
+            <tr>
+                <td>Akash</td>
+                <td>Soni</td>
+                <td>akash@gmail.com</td>
+                <td>+91 43242 42544</td>
+                <td>xyz</td>
+                <td>Bangalore</td>
+                <td>Karnataka</td>
+            </tr>
+            <tr>
+                <td>Soumya</td>
+                <td>Agarwal</td>
+                <td>soumya@gmail.com</td>
+                <td>+91 43242 42544</td>
+                <td>abc</td>
+                <td>Indore</td>
+                <td>Madhya Pradesh</td>
+            </tr>
+            <tr>
+                <td>Akash</td>
+                <td>Soni</td>
+                <td>akash@gmail.com</td>
+                <td>+91 43242 42544</td>
+                <td>xyz</td>
+                <td>Bangalore</td>
+                <td>Karnataka</td>
+            </tr>
+            <tr>
+                <td>Akash</td>
+                <td>Soni</td>
+                <td>akash@gmail.com</td>
+                <td>+91 43242 42544</td>
+                <td>xyz</td>
+                <td>Bangalore</td>
+                <td>Karnataka</td>
+            </tr>
+        </table>
+
+        <br><br><hr><br><br>
 
         <!-- form tags -->
+        <form method="post" action="login.php">
+            <input type="email" name="email" placeholder="Enter email address" />
+            <button type="submit">Submit</button>
+        </form>
+
+        <fieldset>
+            <legend>HTML Form</legend>
+            <form>
+                <formgroup>
+                    <label>Username</label>
+                    <input type="" name="username" placeholder="Jane Doe"/>
+                </formgroup>
+                <input />
+                <textarea></textarea>
+                <button>Button</button>
+            </form>
+        </fieldset>
+
+
+        <form>
+            <fieldset>
+                <legend>HTML Input Tags:</legend>
+                
+                <!--text fields-->
+                <input class="textbox" type="text" name="name_inp" id="name_txt" class="textbox" value="Hello" required/>
+                <input class="textbox" type="url" placeholder="Enter a URL"/>
+                <input class="textbox" type="search" />
+                <input class="textbox" type="password" />
+                <input class="textbox" id="number-input" type="number" />
+                <input class="textbox" id="email-input" type="email" />
+                <textarea class="textbox" rows="10" cols="50"></textarea><br><br>
+    
+                <!-- date/time -->
+                <input id="date-picker" type="date" name="date">
+                <input type="datetime-local">
+                <input type="datetime" >
+                <input type="month">
+                <input type="week">
+                <input type="time">
+                <br><br>
+    
+                <!--check box-->
+                <input name="chk1" type="checkbox"><label>Option 1</label>
+                <input name="chk2" type="checkbox"><label>Option 2</label>
+    
+                <!-- radiobtn -->
+                <input name="gender" type="radio" value="Male"><label>Male</label>
+                <input name="gender" type="radio" value="female"><label>Female</label>
+                <input name="gender" type="radio" value="others"><label>Others</label>
+    
+                <!-- selectors -->
+                <input type="color" name="color">
+                <input type="file">
+                <input type="image" src="list.png" alt="Submit" width="48" height="48">
+                <input type="range" name="range" min="0" max="10">
+    
+                <input type="button" value="CLICK" />
+                <input type="submit" value="SUBMIT"/>
+                <input type="reset" />
+    
+                <button type="submit">Submit LOGIN</button>
+                <button type="menu">MENU BUTTON</button>
+                <button type="button">Button</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
     </body>
 </html>
