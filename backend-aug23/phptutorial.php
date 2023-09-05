@@ -1,5 +1,4 @@
 <?php
-    $username = "Akash";
 
     // single line comment
 
@@ -26,18 +25,108 @@
     // output
     echo "Hello World","My name is ",$username,32434,true;
     $result = print("Hello World"."My name is ".$username.true);
-    if($result) {
-        echo "Print successful";
+    
+    //branching statements - if statement, if...else statement, if...else if...else statement and switch case
+    $age = 30;
+    if($age>18) {
+        echo "Eligible to vote";
     }
-    //branching statements
 
-    //looping statements
+    if($age>18) {
+        echo "Eligible to vote";
+    }
+    else {
+        echo "Not eligible to vote";
+    }
+
+    if($age<18) {
+        echo "Not eligible to vote";
+    }
+    else if($age>18 && $vid==null) {
+        echo "Not eligible to vote";
+    }
+    else if($age>18 && $vid!=null) {
+        echo "Eligible to vote";
+    }
+    else {
+        echo "Could not process";
+    }
+
+    $grade='B+';
+    switch($grade) {
+        case 'A+':
+            echo "Marks in the range of 95 to 100";
+            break;
+        case 'A':
+            echo "Marks in the range of 90 to 95";
+            break;
+        case 'B+':
+            echo "Marks in the range of 80 to 90";
+            break;
+        case 'B':
+            echo "Marks in the range of 70 to 80";
+            break;
+        case 'C':
+            echo "Marks in the range of 55 to 70";
+            break;
+        case 'D':
+            echo "Marks in the range of 40 to 55";
+            break;
+        case 'F':
+            echo "Marks below 40";
+            break;
+        default:
+            echo "Grade value is wrong";
+        
+    }
+
+    //looping statements - while loop, for loop, do...while loop and for each loop
+    $i=1000;
+    while($i<=100) {
+        if($i%2==0) {
+            echo $i;
+        }
+        $i++;
+    }
+
+    for($i=10000;$i<=100;$i++) {
+        if($i%2==0) {
+            echo $i;
+        }
+    }
+
+    $i=100;
+    do {
+        if($i%2==0) {
+            echo $i;
+        }
+        $i++;
+    }
+    while($i<=100);
+
+    $arr1 = array(33344,"Hello",true);
+    foreach($arr1 as $value) {
+        echo '<br>',$value;
+    }
 
     //operations
+            # arithmetic operators - +, -, *, /, %, ++, --
+            # comparison operators - >, <, >=, <=, ==, ===, !=
+            # logical operators - ||, &&, !
+            # assignment operators - =, +=, -=, *=, /=, %=
+            # ternery/conditional operator - (condition) ? truth statement : false statement
 
     //functions
+    function myfunc($param1,$param2) {
+        return $param1+$param2;
+    }
+
+    $sum = myfunc(134,454);
+
+    echo array_sum($arr1);
 
     //superglobal variables
+    $username = $_POST['uname'];
 
 ?>
 
@@ -50,5 +139,9 @@
 </head>
 <body>
     <b>Hello. My name is <?php echo $username ?>.</b>
+    <form method="post" action="">
+        <label>Enter username:</label>
+        <input type="text" name="uname" />
+    </form>
 </body>
 </html>
